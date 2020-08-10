@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block title %}
+Enter Today's Hours
+{% endblock %}
+{% block content %}
+<p>Today is {{date_today}}</p>
+<p>Start date for this fortnight is {{current_start_date}}</p>
+<p>Standard hours to end of today: {{reg_run_hours}}</p>
+<p>Current logged hours: {{current_hours}}</p>
+<p>Hours difference: {{diff_hours}}</p>
+<p class=message>{{oops}}</p>
+<form method="post">
+    <label for="add_hours" style="font-size: 36pt">Hours to add</label>
+    <input name="add_hours" id="add_hours" required size="4" style="font-size: 36pt">
+    <input type="submit" value="Submit" style="font-size: 36pt">
+  </form>
+{% endblock %}

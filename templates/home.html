@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block title %}
+Home
+{% endblock %}
+{% block content %}
+<p>Today is {{date_today}}</p>
+<p>Start date for this fortnight is {{current_start_date}}</p>
+<p>Standard hours to end of today: {{reg_run_hours}}</p>
+<p>Current logged hours: {{current_hours}}</p>
+<p>Hours difference: {{diff_hours}}</p>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block title %}
+FlexiFortnight Start Date Reset
+{% endblock %}
+{% block content %}
+<p>Today is {{date_today}}</p>
+<p>Current start date is {{current_start_date}}</p>
+<p>There are currently {{current_hours}} hours logged</p>
+<p><a class=message> NOTE: Resetting the start date will also reset the hours to 0</a></p>
+<p>Enter new start date or leave blank for today</p>
+<p class=message>{{oops}}</p>
+<form method="post">
+    <label for="set_date" style="font-size: 36pt">Date</label>
+    <input name="set_date" id="set_date" size="8" style="font-size: 36pt">
+    <input type="submit" value="Submit" style="font-size: 36pt">
+</form>
+{% endblock %}
